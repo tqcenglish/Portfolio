@@ -1,0 +1,40 @@
+{% include "template/head.njk" %}
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        {% include "template/header.njk"%}
+        {% include "template/header_sider.njk"%}
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                {% for item in blogs%}
+                <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
+                        <img class="article-image" src=" images/example-blog01.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <h2 class="mdl-card__title-text">{{item.title_text}}</h2>
+                        <div class="mdl-card__supporting-text padding-top">
+                            <span>两天前</span>
+                            <div id="tt1" class=" icon material-icons portfolio-share-btn">share</div>
+                            <div class="mdl-tooltip" for="tt1">
+                                分享
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text no-left-padding">
+                            <p>{{item.supporting_text}}</P>
+                            <span>标签: <a href="#">{{item.tag}}</a></span>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" 
+                            href="/blog/{{item.title_text}}">阅读全部</a>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+            {% include "template/footer.njk"%}
+        </main>
+    </div>
+    <script src="/js/material.min.js"></script>
+</body>
+
+</html>

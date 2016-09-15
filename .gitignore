@@ -1,0 +1,38 @@
+node_modules*
+bower_components
+
+# runing files
+.tmp
+
+# webstorm files
+.idea
+ZycooCallCenter.iml
+
+# ignore eclipse files
+.project
+.classpath
+.settings
+.metadata
+
+# npm 
+npm-debug.log
+
+# log
+logs/*
+
+#env
+config/local.js
+
+#debug log
+*.log
+
+#deploy
+deploy
+deploy.zip
+
+#vscode
+.vscode
+jsconfig.json
+
+# ui test
+ui_test/**/*.png

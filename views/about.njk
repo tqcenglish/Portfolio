@@ -1,0 +1,40 @@
+{% include "template/head.njk"%}
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        {% include "template/header.njk"%}
+        {% include "template/header_sider.njk"%}
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">关于</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/about-header.jpg" border="0" alt="">
+                    </div>
+
+                    <div class="mdl-grid portfolio-copy">
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">tqcenglish</h3>
+                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                            <p>
+                               一个乱七八糟的程序猿.
+                            </p>
+                        </div>
+
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">横渠四句</h3>
+                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                            <p>
+                              为天地立心, 为生民立命, 为往圣继绝学, 为天下开太平.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include "template/footer.njk"%}
+        </main>
+    </div>
+    <script src="/js/material.min.js"></script>
+</body>
+
+</html>

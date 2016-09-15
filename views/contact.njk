@@ -1,0 +1,48 @@
+{% include "template/head.njk"%}
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        {% include "template/header.njk"%}
+        {% include "template/header_sider.njk"%}
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width portfolio-contact">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">联系</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/contact-image.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                          欢迎联系我!
+                        </p>
+                        <form action="#" class="">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                <label class="mdl-textfield__label" for="Name">姓名</label>
+                                <span class="mdl-textfield__error">只能输入文本</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Email">
+                                <label class="mdl-textfield__label" for="Email">邮箱</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                                <label class="mdl-textfield__label" for="note">输入留言内容</label>
+                            </div>
+                            <p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                   提交
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% include "template/footer.njk"%}
+        </main>
+    </div>
+    <script src="/js/material.min.js"></script>
+</body>
+
+</html>
