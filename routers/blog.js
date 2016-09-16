@@ -1,6 +1,7 @@
 let express = require('express')
 let router = express.Router()
-var marked = require('marked');
+let marked = require('marked');
+let fs = require('fs')
 const data = [
   {
     img: "/images/example-work01.jpg",
@@ -30,9 +31,11 @@ router.get('/', function (req, res) {
 });
 
 router.get('/:blogTitle', (req, res) => {
-  var marked = require('marked');
-  let blog = marked('I am using __markdown__.');
-  res.render('blog_detail.njk', {blog: blog})
+  fs.readFile('md/blog/白鹭湿地公园.md', "utf-8", (err, data) => {
+    if (err) throw err;
+    let blog = marked(data);
+    res.render('blog_detail_simple.njk', {blogBody: blog})
+  });
 })
 
 module.exports = router
